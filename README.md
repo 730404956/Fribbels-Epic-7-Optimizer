@@ -26,63 +26,64 @@ _________________
 
 **目录**:
   * [系统需求](#系统需求)
-  * [Optimizer Tab](#optimizer-tab)
-    + [Settings panel](#settings-panel)
-    + [Stat filters](#stat-filters)
-    + [Rating filters](#rating-filters)
-    + [Substat priority filter](#substat-priority-filter)
-    + [Main stat and set filters](#main-stat-and-set-filters)
-    + [Substat force filter](#substat-force-filter)
-    + [Optimization Results](#optimization-results)
-  * [Gear Tab](#gear-tab)
-  * [Heroes Tab](#heroes-tab)
-  * [Importer tab](#importer-tab)
-    + [Creating a new gear set from screenshots](#creating-a-new-gear-set-from-screenshots)
-    + [Importing a gear set from a file](#importing-a-gear-set-from-a-file)
-    + [Save/Load gear and heroes](#save-load-gear-and-heroes)
-    + [Import gear from Zarroc optimizer](#import-gear-from-zarroc-optimizer)
-  * [Getting Started](#getting-started)
-  * [Closing thoughts](#closing-thoughts)
-  * [Troubleshooting](#troubleshooting)
-  * [Contact me](#contact-me)
+  * [自动配装页](#自动配装页)
+    + [设置面板](#设置面板)
+    + [属性过滤器](#属性过滤器)
+    + [评分过滤器](#评分过滤器)
+    + [次属性优先级过滤器](#substat-priority-filter)
+    + [主属性及套装过滤器](#main-stat-and-set-filters)
+    + [次属性强制过滤器](#substat-force-filter)
+    + [自动配装结果](#optimization-results)
+  * [装备页](#gear-tab)
+  * [英雄页](#heroes-tab)
+  * [导入页](#importer-tab)
+    + [从截图导入装备](#creating-a-new-gear-set-from-screenshots)
+    + [从文件导入装备](#importing-a-gear-set-from-a-file)
+    + [保存/载入装备及英雄](#save-load-gear-and-heroes)
+    + [从Zarroc自动配装器导入装备](#import-gear-from-zarroc-optimizer)
+  * [快速入门](#getting-started)
+  * [结语](#closing-thoughts)
+  * [疑难解答](#troubleshooting)
+  * [联系我](#contact-me)
 
-## Optimizer Tab
+## 自动配装页
 
-Here I'll go through the different parts of the optimizer tab, using a tank Ruele build as an example. There are a bunch of panels with options for filtering the gear that I'll walk through in detail.
+在这里我会介绍自动配装器的不同部分，以肉逼瑞儿Build为例。有很多页面带有装备过滤的选项，我将一一介绍。
 
 _________________
 
-### Settings panel
+### 设置面板
 
 ![](https://i.imgur.com/oOz9b55.png)
 
-This panel tracks settings for the other panels to use.
+该页面获得了其他页面的参数以进行设置。
 
-- **Hero**: Select the hero you want to optimize for from the drop down.
-- **Force mode**: Selects the number of substats to enforce from the options selected in the force panel. (See force panel for more details).
-- **Predict reforges**: Predict the reforged stats on +15 level 85 gear to use in the search. Warning: the substat prediction is not 100% accurate so be ready to adjust their stats.
-- **At least one lv 85**: Search only for builds that contain at least one level 85 gear.
-- **Locked items**: When checked, locked items will be used in the optimization. When unchecked, locked items are ignored.
-- **Equipped items**: When checked, equipped items will be used in the optimization. When unchecked, equipped items are ignored EXCEPT for the unit's own equipped items.
-- **Keep current**: When checked, the unit will be forced to use the gear that it currently has, and the optimizer will only try to optimize the gear slots that the unit has unequipped.
-- **Start**: Click to start to optimization request.
-- **Filter**: Once an optimization is complete, click to filter the results by the stats on the filter panels.
-- **Cancel**: Interrupts and cancels an ongoing optimization request.
-- **Load settings**: Loads the optimization settings from the last search for this hero.
-- **Reset settings**: Sets all optimization settings to their default values.
+- **英雄**: 从下拉菜单中选择你想要进行配装的英雄
+- **强制模式**: 选择在强制面板中想要强制的次属性的数量（查看强制面板以获得更多详细信息）
+- **预测重铸**: 预测在配装搜索中+15的85装备的重铸属性。注意：次属性预测并非100%准确，所以请准备好微调属性
+- **最少1件85装备**: 只搜索至少包含1件85装备的配装
+- **锁定装备**: 当该选项选中时，锁定的装备将会强制用于配装结果中。当该选项不选中时，锁定的装备将被忽略
+- **已装备的装备**: 当选中时，已装备的装备将会用于自动配装。当不选中时，已装备的装备将会被忽略，除非该装备是在你当前需要配装的角色身上
+- **保持现有的装备**: 当选中时，进行配装英雄身上的装备将会强制保留在身上，自动配装将只计算未装备的栏位
+- **开始配装**: 点击以开始自动配装请求
+- **过滤器**: 当自动配装完成时，点击按键将会以过滤面板内的属性将结果进行过滤
+- **取消配装**: 中断并取消进行中的自动配装请求
+- **载入设置**: 载入上一次对该英雄的自动配装设置
+- **重置设置**: 将所有自动配装设置设定为默认值
 
 _________________
 
-### Stat filters
+### 属性过滤器
 
 ![](https://i.imgur.com/tVgubaV.png)
 
-This panel defines the stats to filter your optimization results by. The left boxes represent the minimum (inclusive) and the right boxes represent the maximum (inclusive). In this example, we're looking for a Ruele build with:
-- At least 20,000 HP
-- At least 2,400 def
-- Between 180 and 200 speed
+该面板将你自动配装结果以你规定的英雄属性以进行过滤。左边文本框代表最小值（包含），右边文本框代表最大值（包含）。如上面所说的瑞儿为例子，我们将会寻找一个瑞儿配装拥有如下属性：
+- 最少2万血
+- 最少2400防御
+- 速度介于180~200之间
 
-The filter will apply on your optimization results after you click Submit. Once the results have been generated, you can apply more restrictive filters by changing the numbers here, then clicking the **Filter** button. This will narrow down your results without having to do another search.
+
+该过滤器仅会在你点击提交后才会将你的自动配装结果进行过滤。当过滤结果生成后，你可以制定一个更加严格的数值，然后点击 **过滤** 按钮。这将缩小你的配装范围，以避免重新进行一次配装计算。
 
 _________________
 
