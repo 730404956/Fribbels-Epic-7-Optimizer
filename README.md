@@ -30,7 +30,7 @@ _________________
     + [设置面板](#设置面板)
     + [属性过滤器](#属性过滤器)
     + [评分过滤器](#评分过滤器)
-    + [次属性优先级过滤器](#substat-priority-filter)
+    + [次属性优先级过滤器](#次属性优先级过滤器)
     + [主属性及套装过滤器](#main-stat-and-set-filters)
     + [次属性强制过滤器](#substat-force-filter)
     + [自动配装结果](#optimization-results)
@@ -87,25 +87,26 @@ _________________
 
 _________________
 
-### Rating filters
+### 评分过滤器
 
 ![](https://i.imgur.com/xmhk8ml.png)
 
-This panel is similar to the primary stats panel, but applies for calculated stats. These stats you won't see in-game but are various ratings that can help decide between different builds.
 
-- **HpS** -- `Health * Speed` rating. Useful for optimizing units where you want a combination of speed and pure health.
-- **Ehp** -- Effective HP, calculated by: `HP * (Defense/300 + 1)`. EHP is a measure of how much damage your unit can take before dying and is useful for rating the tankiness of units.
-- **EhpS** -- `Effective HP * Speed` rating. Useful for optimizing units where you want a combination of speed and hp/def for tankiness.
-- **Dmg** --  Average damage, calculated by: `Attack * Crit Chance * Crit Damage`. Measures how much damage your unit will deal on average. Note that this takes crit chance into account, so lowering your crit chance impacts the Dmg rating because you'll crit less often, which lowers your average output.
-- **DmgS** -- DPS rating, calculated by: `Attack * Crit Chance * Crit Damage * Speed`. This measures how fast your unit can dish out damage.
-- **Mcd** -- Max Crit Damage, calculated by: `Attack * Crit Damage`. This does not take into account Crit Chance, as opposed to Dmg, and assumes your unit is at 100% Crit Chance. Useful for measuring damage of units like CDom that only need 50% Crit Chance, or PVE units that only need 85% with elemental advantage.
-- **McdS** -- Max DPS rating, calculated by `Attack * Crit Damage * Speed`. Similar to DmgS, just without Crit Chance.
-- **CP** -- This is the CP you would see on the unit's stat page ingame, but doesn't take skill enhances into account. Useful for optimizing unused characters with leftover gear for world boss.
+该页面跟主属性页面有点类似，但适用于已计算好的属性。该评分并不会在游戏里看到，但这个可以帮助你决定哪一个配装更好。
 
-In this example we're looking for Ruele builds with at least 200,000 Effective HP.
+- **HpS** -- `生命 * 速度` 评分. 对于单纯需要速度与血量而不需要其他属性的英雄来说，该评分非常有用。
+- **Ehp** -- 有效生命, 计算公式: `血量 * (防御/300 + 1)`. EHP是一个用于衡量你英雄死亡前能承受的伤害量，该评分对于需要坦度的英雄来说非常有用。
+- **EhpS** -- `有效生命 * 速度` 评分. 对于需要坦度与速度兼得的英雄来说，这个评分就很有用了。
+- **Dmg** --  平均伤害, 计算公式: `攻击 * 暴击率 * 暴击伤害`. 用于计算你英雄的平均伤害。请注意，该评分将暴击率也计算在内，所以降低你的暴击率将会影响你的伤害平分，因为你暴击越少，就会拖低你的平均输出。
+- **DmgS** -- DPS评分, 计算公式: `攻击 * 暴击率 * 暴击伤害 * 速度`. 该评分衡量了你的英雄能多快地打出伤害
+- **Mcd** -- 最大暴击伤害, 计算公式: `攻击 * 暴击伤害`. 相对于Dmg平均伤害，该评分不考虑暴击率，并且假设你的英雄是100%暴击率，该评分对于只需要50%暴击率的英雄，或是PVE中攻击克制属性只需要85%暴击率时非常有用。
+- **McdS** -- 最大DPS评分, 计算公式: `攻击 * 暴击伤害 * 速度`. 类似DmgS,只是不计入暴击率带来的影响。
+- **CP** -- 这是你在游戏内英雄属性页看到的战斗力数值，但这并不考虑技能提升带来的影响。对于你想要用吃灰装备装在板凳角色用于世界BOSS来说非常有用。
+
+在这个例子里，我们会优化寻找一个起码拥有20万的有效血量的瑞儿。
 _________________
 
-### Substat priority filter
+### 次属性优先级过滤器
 
 ![](https://i.imgur.com/i60uzCg.png)
 
