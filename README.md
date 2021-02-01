@@ -2,30 +2,30 @@
 
 # Fribbels 第七史诗自动配装优化器
 
-This is a tool for organizing gear and optimizing gear and unit builds for Epic 7. Gearing units can be time consuming and it's not easy to find optimal combinations of gear within the game, so I made this to help make the gearing process easier.
+这是一款用于整理E7装备以及优化装备的工具。在这个游戏内一个角色的配装可能需要花费很多时间并且很难去组合一套最优的装备，所以我做了这样一个工具来使得配装过程更加容易一些。
 
-Please see the [**Getting Started**](https://github.com/fribbels/Fribbels-Epic-7-Optimizer#getting-started) section for instructions on how to use it.
+请查看 [**快速入门**](https://github.com/Miztan/Fribbels-Epic-7-Optimizer#getting-started) 章节来学习如何使用这套工具。
 
-Features include:
- - Built in image recognition to import gear from screenshots
- - Filter gear optimizer with main stats/sub stats/sets/etc
- - Automatic data updates from EpicSevenDB for new heroes
- - Hero bonus stats for imprints/artifacts/EEs
- - Gear substat efficiency scoring
- - Reforged stat prediction & editing
- - Color coded results sorting
+包含的功能有:
+ - 内建的装备截图识别以用于导入装备
+ - 配装优化器可以主属性/次属性/套装等进行过滤
+ - 自动从EpicSevenDB更新新英雄的数据
+ - 计算英雄的额外属性（阵型/神器/专属装备等）
+ - 装备次属性有效性评分
+ - 重铸属性预测及编辑
+ - 颜色标记结果排序
 
-Here's what it looks like currently:
+目前看上去是这样的:
 
 ![](https://i.imgur.com/dr0Gh1l.png)
 
-## Requirements
-- 64-bit Windows or MacOS
-- Java 8, 64-Bit installed (Please download if you don't yet have it: https://java.com/en/download/manual.jsp, use the offline installer)
+## 系统需求
+- 64位 Windows 或 MacOS
+- 安装64位Java 8 （如果未安装，请从https://java.com/en/download/manual.jsp 下载离线安装包并进行安装）
 _________________
 
-**Table of Contents**:
-  * [Requirements](#requirements)
+**目录**:
+  * [系统需求](#系统需求)
   * [Optimizer Tab](#optimizer-tab)
     + [Settings panel](#settings-panel)
     + [Stat filters](#stat-filters)
