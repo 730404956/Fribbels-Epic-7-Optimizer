@@ -34,8 +34,8 @@ _________________
     + [主属性及套装过滤器](#主属性及套装过滤器)
     + [次属性强制过滤器](#次属性强制过滤器)
     + [自动配装结果](#自动配装结果)
-  * [装备页](#gear-tab)
-  * [英雄页](#heroes-tab)
+  * [装备页](#装备页)
+  * [英雄页](#英雄页)
   * [导入页](#importer-tab)
     + [从截图导入装备](#creating-a-new-gear-set-from-screenshots)
     + [从文件导入装备](#importing-a-gear-set-from-a-file)
@@ -181,30 +181,30 @@ _________________
 - 锁定按钮选中就会将选中的装备标记为锁定，这就会影响后续拥有“锁定”标记的装备的优化配装。
 - 点击铅笔/锤子图标就会允许你编辑/重铸装备属性
 
-## Gear Tab
+## 装备页
 
 ![](https://i.imgur.com/W6bHn4Y.png)
 
-Here you can find a table of all your gears, and sort/filter them. The icons at the bottom enable filters for set and gear slot, and the X clears the filters.
-The **Score** column is a stat I made up which is similar to WSS, with the difference that it takes flat stats into consideration while WSS ignores them. The calculation is:
-
+在这里你可以找到一个包含你所有装备的表格，也可以对他们进行排序/过滤。底部的图标可以根据装备栏位和套装进行过滤，X 可以清除所有的过滤器。
+**分数** 列是一个类似WSS的评分（我创建的），区别在于我将数值属性页计算在内，而WSS评分就忽略他们。评分计算依据是:
     Score = Attack %
-    + Defense %
-    + Hp %
-    + Effectiveness
-    + Effect Resistance
-    + Speed * (8/4)
-    + Crit Damage * (8/7)
-    + Crit Chance * (8/5)
-    + Flat Attack / 39 * 0.5
-    + Flat Defense / 31 * 0.5
-    + Flat Hp / 174 * 0.5
+    分数 = 攻击百分比
+    + 防御百分比
+    + 生命百分比
+    + 效果命中
+    + 效果抵抗
+    + 速度 * (8/4)
+    + 暴击伤害 * (8/7)
+    + 暴击率 * (8/5)
+    + 攻击数值 / 39 * 0.5
+    + 防御数值 /31 * 0.5
+    + 生命数值 / 174 * 0.5
 
-Its used as a measure of how well your gear rolled, scaled by the max roll for 85 gear (using max of 4, not 5 for speed). I found the average rolls for flat stats and used that as a measure of how well the flat stats rolled. The 0.5 multiplier is completely arbitrary, but represents that flat stats are generally less desirable than percent stats.
+这用来评估你这件装备有多好，由85装备的最大属性值来进行缩放（速度最高为4，而不是5）。我发现数值属性的平均属性并用来评估数值属性的评分，0.5的倍数乘是随意设置的，但他的平均数值一般不如百分比数值。
 
 ![](https://i.imgur.com/fwqjtkF.png)
 
-You can edit existing gears or add new gears with this page, and filling in the relevant fields.
+在这个页面里，你可以编辑现有的装备，或者添加新的装备，并填写相关字段。
 
 ## Heroes Tab
 
