@@ -31,8 +31,8 @@ _________________
     + [属性过滤器](#属性过滤器)
     + [评分过滤器](#评分过滤器)
     + [次属性优先级过滤器](#次属性优先级过滤器)
-    + [主属性及套装过滤器](#main-stat-and-set-filters)
-    + [次属性强制过滤器](#substat-force-filter)
+    + [主属性及套装过滤器](#主属性及套装过滤器)
+    + [次属性强制过滤器](#次属性强制过滤器)
     + [自动配装结果](#optimization-results)
   * [装备页](#gear-tab)
   * [英雄页](#heroes-tab)
@@ -135,38 +135,38 @@ _________________
 选择一个好的优先级过滤器，可以让你的优化配装容易很多，因为你不用去考虑不相关或者没什么卵用的装备搭配。
 _________________
 
-### Main stat and set filters
+### 主属性及套装过滤器
 
 ![](https://i.imgur.com/fYOaDPB.png)
 
-This one's fairly straightforward, we're looking for:
-- Necklaces with Health % OR Defense %
-- Rings with Health % OR Defense %
-- Boots with Speed
-- Speed set
-- Resist set OR immunity set
+这个非常简单，我们正在寻找一套:
+- 有生命%或者防御%的项链
+- 有生命%或防御%的戒指
+- 有速度的鞋子
+- 速度套
+- 抵抗或者免疫套
 
-If we don't care about sets as much for a tanky/damage ML Ken or something, this allows for broken sets as well. Here we only care that he has an immunity set, and no preference for any other sets, so they're left blank.
+如果我们想要配装的角色不是很关心套装（比如暗拳或者其他类似的角色），这里就可以让我们用散件搭配。在这里需要注意的是暗拳需要免疫套，除此以外如果不需要其他的套装，留白就可以了。
 
 ![](https://i.imgur.com/8HEsbvY.png)
 
 _________________
 
-### Substat force filter
+### 次属性强制过滤器
 
 ![](https://i.imgur.com/R8XjYhk.png)
 
-Note that in the settings panel previously we set Force mode to "At least 2 stats". Here we have 3 substats we want to force, and with the force mode, we're only optimizing with gear that match at least 2 of these substats:
-- At least 3 Speed
-- At least 1 Hp %
-- At least 1 Def %
+请注意在设定页面中，我们之前设置强制模式为“最起码2个属性”。这里我们有3个次属性想要强制设定，所以用强制模式，我们就可以优化那些起码含有如下2个次属性的装备:
+- 最起码3速度
+- 最起码1 HP %
+- 最起码1 防御 %
 
-For example:
-- A gear with substats: 4 Speed / 8% Atk / 16% Hp / 8% Res would pass this filter because it matches at least 2 stats: Hp% and Speed.
-- A gear with substats: 2 Speed / 8% Atk / 16% HP / 8% Res would fail this filter, because only 1 substat matches the filter: Hp% . This gear will not be used in the optimizations.
+举个例子:
+- 一件装备有如下次属性: 4 速/ 8% 攻击/ 16% 生命/ 8% 抵抗 就会通过这个过滤器，因为他符合起码2个属性:生命百分比和速度
+- 一件装备有如下次属性: 2 速 / 8% 攻击 / 16% 生命 / 8% 抵抗 就会被这个过滤器过滤掉，因为只有一个次属性符合这个过滤器的要求: 生命百分比。 那这件装备在自动配装时就不会被计算在内。
 
 Setting the substat force filter is useful for narrowing down the search space for the optimizer, and reducing the number of permutations it needs to go calculate will make it go faster. Do be careful about filters you set, because an overly aggressive filter could exclude good gears that are useable for this unit. You could have a gear with 2 Speed/ 40% Hp / 100 flat Def / 200 flat HP, and it would fail this filter because only Hp% matches, even though the gear would still be useful.
-
+设置次属性强制优化器对于缩小自动配装搜索时的范围是非常有用的，而且可以减少排列组合所以可以计算得更快。请注意你设定的过滤器，因为过于激进的过滤器可能会将你包里的好装备排除在外。因为你可能有一件 2 速度 / 40% 血量 / 100 防御数值 / 200 生命数值 的装备，但这件装备仍然会被过滤器排除掉，因为只有生命百分比符合要求，即使这件装备是有用的。
 _________________
 
 ### Optimization Results
