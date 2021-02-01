@@ -1,6 +1,6 @@
 
 
-# Fribbels Epic 7 Gear Optimizer
+# Fribbels 第七史诗自动配装优化器
 
 This is a tool for organizing gear and optimizing gear and unit builds for Epic 7. Gearing units can be time consuming and it's not easy to find optimal combinations of gear within the game, so I made this to help make the gearing process easier.
 
