@@ -110,30 +110,28 @@ _________________
 
 ![](https://i.imgur.com/i60uzCg.png)
 
-**This is probably the most useful filter but please read before using it. Using this wrong can exclude good results from the search.**
+**这个可能是最有用的过滤器，但使用前请务必先阅读好使用指南。用错了可能会将最佳配装排除在外**。
 
-Assign a priority to each substat type from -1 to 3. This will go through every gear, and calculates the # of max rolls of each stat. The # of rolls is then multiplied by the stat priority you chose. It adds up all the stat scores for a gear, and sorts your gear by their highest substat score.
+对每个次属性类型赋予优先级，从-1到3. 该优先级将会遍历每一件装备，并计算每个装备每一个次属性的属性值。属性值将会乘以你对每个次属性的优先级。然后将每一件装备的属性分加起来，并从最高的次属性分数进行排序。
 
- In this example we're mostly looking for a fast and tanky Ruele so we assign:
-- HP and Def a high rating of 3, since those are the highest priority stats
-- Speed a slightly lower rating of 2
-- And Res a rating of 1, as its a nice-to-have stat and can still be useful for her
-- We don't particularly care about Attack/Crit Chance/Crit Damage/Effectiveness, so we leave those at 0
+ 在这个例子中，我们主要是寻找一个又快又肉的瑞儿，所以我们指定如下的属性优先级:
+- 血量与防御，高评分3，因为他们是最高优先级的属性
+- 速度评分就低一点点，2
+- 并且抵抗评分为1，该属性其实是一个对于瑞儿有用的属性
+- 我们并不关心攻击/暴击率/爆伤/命中，所以这些属性的权重是0
 
-Then, we set the Top % slider to 30%. This will take all your weapons, score them based on the priority defined above, then only considers the Top 30% of the scores for optimization. Then it does the same for helmets, armors, etc, and then the optimizer generates permutations based on those Top 30% gears.
+然后，我们将最高百分比的滑块调整到30%。这将计算你所有的武器，并将根据你之前所制定的优先级来计算分数，然后只考虑前30%分数的装备以进行优化配装。然后对头盔、护甲等进行相同的操作。最后优化配装器会根据前30%的装备进行排列组合。
 
-**The Top % slider must be set to something other than 100% for this filter to work**, otherwise you're just using the Top 100% of your gears and nothing is being filtered. Worth noting that this rating is a heuristic so it doesn't always produce optimal results if your percent is set too low. I find that 30-50% is a good range to work with, because 50% filters out most of the irrelevant gears (like dps stats on a tank build, or vice versa). Below 30%, the filter gets very sensitive and you might not have enough gears to produce optimal results, so the results can be missing some permutations when some useful gears get filtered out. Try playing around with different Top % values.
+**要让该过滤器正常使用，必须将“最高百分比”滑块设置为100%以外的值**, 否则你将只会使用前100%的装备，没有任何装备会被过滤。值得一提的是，这种评分是一种启发式的方式，如果你设置最高百分比太低，那它并不总是产生最优结果。我发现30~50%区间是比较好的选择，因为50%会过滤大部分不相关的装备（比如你需求坦装，就会过滤掉DPS装，反之亦然）。低于30%的话，该过滤器就会变得过于敏感，那你可能就不会获得充足的装备来产生最佳配装结果，所以可能会错过最佳的配装结果，因为一下好装备已经被过滤掉了。多尝试一下不同的最高百分比值吧！
 
-An example priority filter for a DPS unit like Arby could be something like this, where you only want damage stats:
-
+举个例子，像暗二五这样的纯DPS角色，优先级过滤器可能就会像下面这样，因为你只需要输出属性:
 ![](https://i.imgur.com/sdIG6xQ.png)
 
-Or for a tanky Champion Zerato, where you want a mix of tankiness, damage, and effectiveness, but NOT resistance, you can set resistance to -1 to decrease the gear rating if it has resist substats:
+或者像肉逼泥巴哥一样，当你想要混合坦度，输出，命中，但不需要抵抗时。你可以把抵抗设置为-1来降低拥有抵抗属性的装备的评分。
 
 ![](https://i.imgur.com/CF3KmxT.png)
 
-Choosing a good priority filter makes the optimization a lot easier since you won't have to consider irrelevant or low-rolled gears.
-
+选择一个好的优先级过滤器，可以让你的优化配装容易很多，因为你不用去考虑不相关或者没什么卵用的装备搭配。
 _________________
 
 ### Main stat and set filters
