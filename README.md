@@ -205,21 +205,25 @@ _________________
 
 在这个页面里，你可以编辑现有的装备，或者添加新的装备，并填写相关字段。
 
-## Heroes Tab
+## 英雄页
+
 
 ![](https://i.imgur.com/FnMbGWO.png)
 
-Here you can add new heroes and manage existing ones. I think most of the buttons are fairly self explanatory, the one thing worth noting is the **Add Bonus Stats** page, which lets you add artifact/imprint stats to the hero for optimization.
+
+在这里你可以添加新的英雄或者管理现有的。我认为绝大多数按键都挺容易自己明白的，就其中一点需要注意的是 **添加额外属性** 页，这里可以让你为英雄添加神器/阵型属性，以进行优化配装。
+
 
 ![](https://i.imgur.com/tAytvsb.png)
 
-SSS Krau with +30 Aurius will have 91 Atk / 819 Hp / and 18% imprint Hp.
 
-## Importer tab
+SSS 克劳乌（宝马）用+30的亚乌利斯分摊神器，将会有 91 攻击 / 819 生命 / 以及 18% 的自阵生命。
+
+## 导入页
 
 ![](https://i.imgur.com/LyJq3Lr.png)
 
-This tab lets you do various things with importing/exporting files.
+该页面让你可以导入/导出不同的东西
 _________________
 
 ### Creating gear data from screenshots
