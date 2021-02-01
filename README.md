@@ -33,7 +33,7 @@ _________________
     + [次属性优先级过滤器](#次属性优先级过滤器)
     + [主属性及套装过滤器](#主属性及套装过滤器)
     + [次属性强制过滤器](#次属性强制过滤器)
-    + [自动配装结果](#optimization-results)
+    + [自动配装结果](#自动配装结果)
   * [装备页](#gear-tab)
   * [英雄页](#heroes-tab)
   * [导入页](#importer-tab)
@@ -165,22 +165,21 @@ _________________
 - 一件装备有如下次属性: 4 速/ 8% 攻击/ 16% 生命/ 8% 抵抗 就会通过这个过滤器，因为他符合起码2个属性:生命百分比和速度
 - 一件装备有如下次属性: 2 速 / 8% 攻击 / 16% 生命 / 8% 抵抗 就会被这个过滤器过滤掉，因为只有一个次属性符合这个过滤器的要求: 生命百分比。 那这件装备在自动配装时就不会被计算在内。
 
-Setting the substat force filter is useful for narrowing down the search space for the optimizer, and reducing the number of permutations it needs to go calculate will make it go faster. Do be careful about filters you set, because an overly aggressive filter could exclude good gears that are useable for this unit. You could have a gear with 2 Speed/ 40% Hp / 100 flat Def / 200 flat HP, and it would fail this filter because only Hp% matches, even though the gear would still be useful.
 设置次属性强制优化器对于缩小自动配装搜索时的范围是非常有用的，而且可以减少排列组合所以可以计算得更快。请注意你设定的过滤器，因为过于激进的过滤器可能会将你包里的好装备排除在外。因为你可能有一件 2 速度 / 40% 血量 / 100 防御数值 / 200 生命数值 的装备，但这件装备仍然会被过滤器排除掉，因为只有生命百分比符合要求，即使这件装备是有用的。
 _________________
 
-### Optimization Results
+### 自动配装结果
 
 ![](https://i.imgur.com/zF1xKlE.png)
 
-Here you can see all the results from the optimization, sort by stat, and equip/lock the results.
-- The top row shows your currently equipped gear stats
-- Each column is color coded based on the min/max ranges of the stat on each page
-- You can use the arrows at the bottom to navigate between multiple pages of results
-- Select All/Deselect All modifies the little checkbox on each gear, or alternatively you can click individual boxes
-- Equip Selected will equip those checked gears onto the hero (while unequipping anything they were holding before)
-- Lock Selected will mark those checked gears as locked, which affects later optimizations that have "Locked Items" unchecked in settings.
-- Clicking on the pencil/hammer icons will allow you to edit/reforge item stats.
+在这里你可以看到所有自动配装的结果，根据属性排序，也可以装备/锁定结果。
+- 最顶那一行是你现在装备的装备属性
+- 每一行都会被颜色标记，基于你设定的每个属性最小/最大范围
+- 你可以用底部的箭头来在不同页之间进行翻页
+- 全选/取消全选 会更改每件装备上的小复选框，或者你可以单独点击每一个复选框
+- 装备按钮选中的话就会将该装备装备到英雄身上（同时顶掉他身上已装备的装备）
+- 锁定按钮选中就会将选中的装备标记为锁定，这就会影响后续拥有“锁定”标记的装备的优化配装。
+- 点击铅笔/锤子图标就会允许你编辑/重铸装备属性
 
 ## Gear Tab
 
