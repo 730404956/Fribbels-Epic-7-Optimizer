@@ -4,7 +4,7 @@
 
 这是一款用于整理E7装备以及优化装备的工具。在这个游戏内一个角色的配装可能需要花费很多时间并且很难去组合一套最优的装备，所以我做了这样一个工具来使得配装过程更加容易一些。
 
-请查看 [**快速入门**](https://github.com/Miztan/Fribbels-Epic-7-Optimizer#getting-started) 章节来学习如何使用这套工具。
+请查看 [**快速入门**](https://github.com/Miztan/Fribbels-Epic-7-Optimizer#快速入门) 章节来学习如何使用这套工具。
 
 包含的功能有:
  - 内建的装备截图识别以用于导入装备
@@ -36,15 +36,15 @@ _________________
     + [自动配装结果](#自动配装结果)
   * [装备页](#装备页)
   * [英雄页](#英雄页)
-  * [导入页](#importer-tab)
-    + [从截图导入装备](#creating-a-new-gear-set-from-screenshots)
-    + [从文件导入装备](#importing-a-gear-set-from-a-file)
-    + [保存/载入装备及英雄](#save-load-gear-and-heroes)
-    + [从Zarroc自动配装器导入装备](#import-gear-from-zarroc-optimizer)
-  * [快速入门](#getting-started)
-  * [结语](#closing-thoughts)
-  * [疑难解答](#troubleshooting)
-  * [联系我](#contact-me)
+  * [导入页](#导入页)
+    + [从截图创建装备](#从截图创建装备)
+    + [从文件导入装备](#从文件导入装备)
+    + [保存/载入装备及英雄](#保存/载入装备及英雄)
+    + [从Zarroc自动配装器导入装备](#从Zarroc自动配装器导入装备)
+  * [快速入门](#快速入门)
+  * [结语](#结语)
+  * [疑难解答](#疑难解答)
+  * [联系我](#联系我)
 
 ## 自动配装页
 
@@ -211,7 +211,7 @@ _________________
 ![](https://i.imgur.com/FnMbGWO.png)
 
 
-在这里你可以添加新的英雄或者管理现有的。我认为绝大多数按键都挺容易自己明白的，就其中一点需要注意的是 **添加额外属性** 页，这里可以让你为英雄添加神器/阵型属性，以进行优化配装。
+在这里你可以添加新的英雄或者管理现有的。我认为绝大多数按钮都挺容易自己搞明白的，就其中一点需要注意的是 **添加额外属性** 页，这里可以让你为英雄添加神器/阵型属性，以便进行优化配装。
 
 
 ![](https://i.imgur.com/tAytvsb.png)
@@ -226,7 +226,7 @@ SSS 克劳乌（宝马）用+30的亚乌利斯分摊神器，将会有 91 攻击
 该页面让你可以导入/导出不同的东西
 _________________
 
-### Creating gear data from screenshots
+### 从截图创建装备
 
 Select the folder you have your screenshots in and the app will start reading your screenshots. Make sure the folder only contains your screenshots and nothing else. This will then output your gear.txt file, and you can export it somewhere for the next step. If there are any errors reading the screenshots, the list of failed files will be shown.
 
