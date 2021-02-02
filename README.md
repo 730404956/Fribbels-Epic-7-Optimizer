@@ -327,7 +327,6 @@ _________________
 下面这有个视频涵盖了大部分的操作部分，可以看看学习下: https://www.youtube.com/watch?v=i_QW4INcZIE
 
 
-**Updating the optimizer with new gear:**
 **用新装备去更新优化配装器:**
 
 * 当你强化/重铸装备时，它有助于更新配装优化器。 在装备页上手动添加新零件，或单击重铸图标以更新85-> 90装备。 
@@ -336,7 +335,6 @@ _________________
 
 **如何获得好的配装优化结果:**
 
-Here's some quick tips on getting the best results. This is assuming you've read the [Optimization panel](https://github.com/fribbels/Fribbels-Epic-7-Optimizer#optimizer-tab) descriptions.
 以下是获得最佳优化结果的一些小Tips。 假设您已阅读[自动配装页]（https://github.com/Miztan/Fribbels-Epic-7-Optimizer#自动配装页）的说明。 
 
 * **尽可能选择套装和主属性.** 这是最容易缩小配装范围的方法.
