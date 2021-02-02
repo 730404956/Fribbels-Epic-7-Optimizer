@@ -228,52 +228,52 @@ _________________
 
 ### 从截图创建装备
 
-Select the folder you have your screenshots in and the app will start reading your screenshots. Make sure the folder only contains your screenshots and nothing else. This will then output your gear.txt file, and you can export it somewhere for the next step. If there are any errors reading the screenshots, the list of failed files will be shown.
+选择你截图所在的文件夹，本应用将开始读取你的截图。 确保该文件夹仅包含E7的截图，而没有其他内容。 然后将输出一个gear.txt文件，你可以将其导出到下一步。 如果读取截图有任何错误，将显示失败文件列表。 
 
-### Importing gear data
+### 从文件导入装备
 
-Once you have the gear.txt file from the OCR step, choose the file and it will import the gear into the optimizer.
+当你在OCR步骤中获得了gear.txt文件后，选择文件，它将把装备导入到优化配装器中。 
 
-* *Append data* will add the new gears to your existing gears.
-* *Overwrite data* will load in the new data, removing all previous items and heroes
-* *Merge data* will combine your new gear screenshots with your currently loaded gear while keeping your heroes' equipped gear and builds intact.
+* *新添数据* 会将新装备添加到你现有的装备列表中
+* *覆写数据* 会载入新的装备数据，并删除旧的英雄和装备
+* *合并数据* 会将你新装备与当前加载的装备合并在一起，同时保持英雄已装备的装备 
 
-If you want to wipe all your data and start clean with gear screenshots, use Overwrite.
+如果你想清除你所有的旧有数据并重新用新的截图开始，使用覆盖。
 
-If you have new screenshot files to add to a save, use the Append option.
+如果你有新的截图文件要添加到装备列表中，请使用“附加”选项。 
 
-If you already have a save, and you've screenshotted all your gear again, use Merge to replace old items with new items.
-
-
-### Save/Load all optimizer data
-
-Once you make changes to your items/heroes, the changes should be saved before you close the app. You can choose a file to save it to, and then later on load that file to import the data back in.
-
-The app also does autosave to an 'autosave.json' upon changes being made, and will autoload whatever was saved to the autosave file the next time the app opens.
+如果您已有存档，并且再次截图了所有装备，请使用“合并”将旧装备替换为新装备。 
 
 
-### Import gear from Zarroc optimizer
+### 保存/载入装备及英雄
 
-If were a user of Zarroc's gear optimizer, this lets you import your data directly from your existing Zarroc save file. All gear, heroes, and artifacts will be imported.
+对装备/英雄进行更改后，应先保存更改，然后再关闭应用程序。 您可以选择一个文件保存到该文件，然后在重新打开应用时加载该文件后并导入数据。 
+
+进行更改后，该应用程序还会自动保存到“ autosave.json”，并在下次打开该应用程序时自动将保存的内容自动加载到自动保存文件中。 
 
 
-## Getting Started
+### 从Zarroc自动配装器导入装备
 
-Please read these instructions carefully!
+如果你是Zarroc装备优化器的用户，这使您可以直接从现有Zarroc保存文件中导入数据。 所有装备，英雄和神器都会被导入。 
 
-**Installation:**
+
+## 快速入门
+
+请务必仔细阅读这些说明！ 
+
+**安装:**
 
 #### Windows
 
-1. On the [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) page, choose the latest release, and download the file that looks like ``FribbelsE7Optimizer-x.x.x-windows.zip``
-    * Do not download the Source Code options, those won't work
-2. Install **Java 8 - 64 bit** https://java.com/en/download/manual.jsp - Get the offline installer
-    * After installing, restart your computer (required!)
-3. Install an emulator to run Epic 7 on
-    * I used LDPlayer, but others have worked as well: MeMu, Nox, etc. Bluestacks has issues with screen resolution, would recommend an alternative. See a solution for getting Bluestacks working [here](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/commit/94b8730e94e6323b278265ab46f6602ed7822c22#r45552268)
-4. Set the emulator's screen resolution to **1600 x 900**. [Example](https://i.imgur.com/kyUQ86a.png)
-5. Set Epic 7 to **English** and enable **High Quality Support** in settings. [Example](https://i.imgur.com/iEbfVN3.png)
-6. Unzip the downloaded file, and run FribbelsE7Optimizer.exe (or FribbelsE7Optimizer.dmg/app on Mac) [Example](https://i.imgur.com/jltdg0U.png)
+1. 在 [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) 页面, 选择最新的发布版本, 然后下载一个类似 ``FribbelsE7Optimizer-x.x.x-windows.zip`` 名字的文件
+    * 不要下载源文件文件，那用不了的
+2. 安装 **Java 8 - 64 位** https://java.com/en/download/manual.jsp - 下载离线安装包
+    * 安装完后重启一下电脑 (必须!)
+3. 安装一个安卓模拟器去运行E7
+    * 我用雷电模拟器,但其他的模拟器应该也能用，比如Mumu，夜神等等。蓝叠因为在屏幕分辨率那里有问题，所以建议使用别的。如果你硬要使用蓝叠，那看看下面这个链接应该可以搞定 [蓝叠的解决方法](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/commit/94b8730e94e6323b278265ab46f6602ed7822c22#r45552268)
+4. 将模拟器的分辨率设置为 **1600 x 900**. [Example](https://i.imgur.com/kyUQ86a.png)
+5. 将E7设置为 **英语** 并在设置中开启 **高质量模式** . [Example](https://i.imgur.com/iEbfVN3.png)
+6. 解压下载的文件，并运行FribbelsE7Optimizer.exe (or FribbelsE7Optimizer.dmg/app on Mac) [Example](https://i.imgur.com/jltdg0U.png)
 
 #### Mac OS/Bluestacks
 
