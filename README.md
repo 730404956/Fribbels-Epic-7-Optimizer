@@ -266,54 +266,54 @@ _________________
 #### Windows
 
 1. 在 [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) 页面, 选择最新的发布版本, 然后下载一个类似 ``FribbelsE7Optimizer-x.x.x-windows.zip`` 名字的文件
-    * 不要下载源文件文件，那用不了的
+    * 别下载源文件文件，那用不了的
 2. 安装 **Java 8 - 64 位** https://java.com/en/download/manual.jsp - 下载离线安装包
     * 安装完后重启一下电脑 (必须!)
 3. 安装一个安卓模拟器去运行E7
     * 我用雷电模拟器,但其他的模拟器应该也能用，比如Mumu，夜神等等。蓝叠因为在屏幕分辨率那里有问题，所以建议使用别的。如果你硬要使用蓝叠，那看看下面这个链接应该可以搞定 [蓝叠的解决方法](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/commit/94b8730e94e6323b278265ab46f6602ed7822c22#r45552268)
 4. 将模拟器的分辨率设置为 **1600 x 900**. [Example](https://i.imgur.com/kyUQ86a.png)
 5. 将E7设置为 **英语** 并在设置中开启 **高质量模式** . [Example](https://i.imgur.com/iEbfVN3.png)
-6. 解压下载的文件，并运行FribbelsE7Optimizer.exe (or FribbelsE7Optimizer.dmg/app on Mac) [Example](https://i.imgur.com/jltdg0U.png)
+6. 解压下载的文件，并运行FribbelsE7Optimizer.exe (或者在Mac上运行 FribbelsE7Optimizer.dmg/app ) [例子](https://i.imgur.com/jltdg0U.png)
 
-#### Mac OS/Bluestacks
+#### Mac OS/蓝叠
 
-1. On the [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) page, choose the latest release, and download the file that looks like ``FribbelsE7Optimizer-x.x.x-mac.dmg``
-    * There is a dmg file and a zip file. Try the dmg first and if it doesn't work, try the zip. Mac version is still experimental.
-    * Do not download the Source Code options, those won't work
-2. Install **Java 8 - 64 bit**
-    * Mac needs both JRE and JDK:
-    * JRE: https://java.com/en/download/manual.jsp - Get the offline installer
+1. 在 [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) 页面, 选择最新的发布版本, 然后下载一个类似 ``FribbelsE7Optimizer-x.x.x-mac.dmg`` 名字的文件
+    * 在那有个dmg文件和zip文件，先尝试下载dmg文件，如果dmg文件用不了再尝试zip格式，Mac版本还在测试阶段
+    * 别下载源文件文件，那用不了的
+2. 安装 **Java 8 - 64 位**
+    * Mac需要同时安装JRE和JDK:
+    * JRE: https://java.com/en/download/manual.jsp - 下载离线安装包
     * JDK: https://www.oracle.com/java/technologies/javase-downloads.html
-    * After installing, restart your computer (required!)
-3. Install [Bluestacks](https://www.bluestacks.com/download.html)
-    * Set the emulator's screen resolution to **1600x900** in the Preference menu
-4. Configure keyboard shortcut for Screenshot
-    * On your Mac: System Preference > Keyboard > Shortcuts Tab
-      * Left Sidebar: Select App Shortcuts
-      * Click the [+] button to add a shortcut
-      * Application: Bluestacks
-      * Menu Title: `Take screenshot` (any typo here will make it not work)
-      * Keyboard Shortcut: Anything you want it to be
-5. Back to Bluestacks: Install E7 from the Play Store and launch the game
-   * Set Epic 7 to **English** and enable **High Quality Support** in settings. [Example](https://i.imgur.com/iEbfVN3.png)
-6. Make sure to enter Full Screen Mode (Cmd+Shift+F) before starting your gear capture
+    * 安装完后重启一下电脑 (必须!)
+3. 安装 [蓝叠](https://www.bluestacks.com/download.html)
+    * 在设置菜单里将模拟器的分辨率设置为 **1600 x 900**
+4. 设置键盘截图快捷键
+    * 在你的Mac的: 系统设置 > 键盘 > 快捷方式
+      * 左侧边栏Left Sidebar: 选择应用快捷方式
+      * 点击[+]按钮去新增一个快捷方式
+      * 应用:蓝叠
+      * 标题: `Take screenshot`(必须英文)(这里打错了的话就用不了了)
+      * 键盘快捷键: 这里你喜欢哪个就设哪个快捷键
+5. 返回蓝叠:安装E7并打开游戏
+   * 将E7设置为 **英语** 并在设置中开启 **高质量模式** . [Example](https://i.imgur.com/iEbfVN3.png)
+6. 确保开始装备截图前，进入全屏模式 (Cmd+Shift+F)
 
-**Importing gear screenshots:**
+**导入装备截图:**
 
-1. Open the Gear Management screen in Epic 7 and sort by Max Enhance<br><br>
-2. Click each of the gears that you want to import, and screenshot it with your emulator's hotkey. Every screenshot should be **1600x900** and look **EXACTLY** like this: https://i.imgur.com/68A8Uf0.jpg
+1. 在E7里打开装备管理界面并选择按照'最大强化'排列<br><br>
+2. 一一点击你想要导入的装备，并用你模拟器的快捷键进行截图，所有截图的分辨率必须为 **1600x900** 并且 **完完全全** 跟下图一样的模式: https://i.imgur.com/68A8Uf0.jpg
 
 ![https://i.imgur.com/ny7uaa8.jpg](https://i.imgur.com/ny7uaa8.jpg)
 
-* Most emulators have a screenshot hotkey to make this easier: Ctrl + 0 for LDPlayer
-* I would recommend screenshotting 10-20 gears to start with, then testing the rest of the steps to make sure the screenshots work before doing them all. I usually only screenshot the +9 to +15 gears for the optimizer.
-3. Create an empty folder and collect all your screenshots into that folder.<br><br>
-4. Go to the Importer tab, click on "Choose folder" under *Creating gear data from screenshots*, find your screenshots folder, and click Open Folder.<br><br>
-5. The app will start reading the screenshots and your progress will be displayed. Once it is done, click Export, and save the *gear.txt* file.<br><br>
-6. Under the *Importing gear data* section, click on Append data, and select your *gear.txt* file.<br><br>
-7. Now you should see your imported gears under the Gears tab.
+* 大部分模拟器都有截图快捷键的，比如雷电就是Ctrl+0
+* 我建议先导入10~20件装备，任何测试一下余下的步骤确保这些截图正常导入。一般来说我只会截+9以上的装备导入到优化器里面。
+3. 创建一个空的文件夹，并将你所有的截图保存在里面.<br><br>
+4. 点击App里的导入页，然后在*从截图创建装备数据* 下面点击"选择文件夹"，选中你的截图文件夹并点击"打开文件夹".<br><br>
+5. 然后App就会开始自动读取你的截图，并且会显示进度。当搞定以后就点击Export去将装备列表保存到*gear.txt*文件里.<br><br>
+6. 在*导入装备数据*下面点击添加数据，并选中你上一步生成的*gear.txt*文件.<br><br>
+7. 现在你应该就能在装备页里面看见你导入的装备了.
 
-**Optimizing a unit:**
+**为一个英雄优化配装:**
 
 1. Add a unit on the Heroes tab, by selecting their name and clicking Add New Hero.
 2. Select the new hero and click Add Bonus Stats. Here add any stats from your artifact, imprint, or EE. [Example](https://i.imgur.com/2aC22mN.png)
