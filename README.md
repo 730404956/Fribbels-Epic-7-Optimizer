@@ -4,7 +4,7 @@
 
 这是一款用于整理E7装备以及优化装备的工具。在这个游戏内一个角色的配装可能需要花费很多时间并且很难去组合一套最优的装备，所以我做了这样一个工具来使得配装过程更加容易一些。
 
-请查看 [**快速入门**](https://github.com/Miztan/Fribbels-Epic-7-Optimizer#getting-started) 章节来学习如何使用这套工具。
+请查看 [**快速入门**](https://github.com/Miztan/Fribbels-Epic-7-Optimizer#快速入门) 章节来学习如何使用这套工具。
 
 包含的功能有:
  - 内建的装备截图识别以用于导入装备
@@ -26,321 +26,324 @@ _________________
 
 **目录**:
   * [系统需求](#系统需求)
-  * [Optimizer Tab](#optimizer-tab)
-    + [Settings panel](#settings-panel)
-    + [Stat filters](#stat-filters)
-    + [Rating filters](#rating-filters)
-    + [Substat priority filter](#substat-priority-filter)
-    + [Main stat and set filters](#main-stat-and-set-filters)
-    + [Substat force filter](#substat-force-filter)
-    + [Optimization Results](#optimization-results)
-  * [Gear Tab](#gear-tab)
-  * [Heroes Tab](#heroes-tab)
-  * [Importer tab](#importer-tab)
-    + [Creating a new gear set from screenshots](#creating-a-new-gear-set-from-screenshots)
-    + [Importing a gear set from a file](#importing-a-gear-set-from-a-file)
-    + [Save/Load gear and heroes](#save-load-gear-and-heroes)
-    + [Import gear from Zarroc optimizer](#import-gear-from-zarroc-optimizer)
-  * [Getting Started](#getting-started)
-  * [Closing thoughts](#closing-thoughts)
-  * [Troubleshooting](#troubleshooting)
-  * [Contact me](#contact-me)
+  * [自动配装页](#自动配装页)
+    + [设置面板](#设置面板)
+    + [属性过滤器](#属性过滤器)
+    + [评分过滤器](#评分过滤器)
+    + [次属性优先级过滤器](#次属性优先级过滤器)
+    + [主属性及套装过滤器](#主属性及套装过滤器)
+    + [次属性强制过滤器](#次属性强制过滤器)
+    + [自动配装结果](#自动配装结果)
+  * [装备页](#装备页)
+  * [英雄页](#英雄页)
+  * [导入页](#导入页)
+    + [从截图创建装备](#从截图创建装备)
+    + [从文件导入装备](#从文件导入装备)
+    + [保存/载入装备及英雄](#保存/载入装备及英雄)
+    + [从Zarroc自动配装器导入装备](#从Zarroc自动配装器导入装备)
+  * [快速入门](#快速入门)
+  * [结语](#结语)
+  * [疑难解答](#疑难解答)
+  * [联系我](#联系我)
 
-## Optimizer Tab
+## 自动配装页
 
-Here I'll go through the different parts of the optimizer tab, using a tank Ruele build as an example. There are a bunch of panels with options for filtering the gear that I'll walk through in detail.
+在这里我会介绍自动配装器的不同部分，以肉逼瑞儿Build为例。有很多页面带有装备过滤的选项，我将一一介绍。
 
 _________________
 
-### Settings panel
+### 设置面板
 
 ![](https://i.imgur.com/oOz9b55.png)
 
-This panel tracks settings for the other panels to use.
+该页面获得了其他页面的参数以进行设置。
 
-- **Hero**: Select the hero you want to optimize for from the drop down.
-- **Force mode**: Selects the number of substats to enforce from the options selected in the force panel. (See force panel for more details).
-- **Predict reforges**: Predict the reforged stats on +15 level 85 gear to use in the search. Warning: the substat prediction is not 100% accurate so be ready to adjust their stats.
-- **At least one lv 85**: Search only for builds that contain at least one level 85 gear.
-- **Locked items**: When checked, locked items will be used in the optimization. When unchecked, locked items are ignored.
-- **Equipped items**: When checked, equipped items will be used in the optimization. When unchecked, equipped items are ignored EXCEPT for the unit's own equipped items.
-- **Keep current**: When checked, the unit will be forced to use the gear that it currently has, and the optimizer will only try to optimize the gear slots that the unit has unequipped.
-- **Start**: Click to start to optimization request.
-- **Filter**: Once an optimization is complete, click to filter the results by the stats on the filter panels.
-- **Cancel**: Interrupts and cancels an ongoing optimization request.
-- **Load settings**: Loads the optimization settings from the last search for this hero.
-- **Reset settings**: Sets all optimization settings to their default values.
+- **英雄**: 从下拉菜单中选择你想要进行配装的英雄
+- **强制模式**: 选择在强制面板中想要强制的次属性的数量（查看强制面板以获得更多详细信息）
+- **预测重铸**: 预测在配装搜索中+15的85装备的重铸属性。注意：次属性预测并非100%准确，所以请准备好微调属性
+- **最少1件85装备**: 只搜索至少包含1件85装备的配装
+- **锁定装备**: 当该选项选中时，锁定的装备将会强制用于配装结果中。当该选项不选中时，锁定的装备将被忽略
+- **已装备的装备**: 当选中时，已装备的装备将会用于自动配装。当不选中时，已装备的装备将会被忽略，除非该装备是在你当前需要配装的角色身上
+- **保持现有的装备**: 当选中时，进行配装英雄身上的装备将会强制保留在身上，自动配装将只计算未装备的栏位
+- **开始配装**: 点击以开始自动配装请求
+- **过滤器**: 当自动配装完成时，点击按键将会以过滤面板内的属性将结果进行过滤
+- **取消配装**: 中断并取消进行中的自动配装请求
+- **载入设置**: 载入上一次对该英雄的自动配装设置
+- **重置设置**: 将所有自动配装设置设定为默认值
 
 _________________
 
-### Stat filters
+### 属性过滤器
 
 ![](https://i.imgur.com/tVgubaV.png)
 
-This panel defines the stats to filter your optimization results by. The left boxes represent the minimum (inclusive) and the right boxes represent the maximum (inclusive). In this example, we're looking for a Ruele build with:
-- At least 20,000 HP
-- At least 2,400 def
-- Between 180 and 200 speed
+该面板将你自动配装结果以你规定的英雄属性以进行过滤。左边文本框代表最小值（包含），右边文本框代表最大值（包含）。如上面所说的瑞儿为例子，我们将会寻找一个瑞儿配装拥有如下属性：
+- 最少2万血
+- 最少2400防御
+- 速度介于180~200之间
 
-The filter will apply on your optimization results after you click Submit. Once the results have been generated, you can apply more restrictive filters by changing the numbers here, then clicking the **Filter** button. This will narrow down your results without having to do another search.
+
+该过滤器仅会在你点击提交后才会将你的自动配装结果进行过滤。当过滤结果生成后，你可以制定一个更加严格的数值，然后点击 **过滤** 按钮。这将缩小你的配装范围，以避免重新进行一次配装计算。
 
 _________________
 
-### Rating filters
+### 评分过滤器
 
 ![](https://i.imgur.com/xmhk8ml.png)
 
-This panel is similar to the primary stats panel, but applies for calculated stats. These stats you won't see in-game but are various ratings that can help decide between different builds.
 
-- **HpS** -- `Health * Speed` rating. Useful for optimizing units where you want a combination of speed and pure health.
-- **Ehp** -- Effective HP, calculated by: `HP * (Defense/300 + 1)`. EHP is a measure of how much damage your unit can take before dying and is useful for rating the tankiness of units.
-- **EhpS** -- `Effective HP * Speed` rating. Useful for optimizing units where you want a combination of speed and hp/def for tankiness.
-- **Dmg** --  Average damage, calculated by: `Attack * Crit Chance * Crit Damage`. Measures how much damage your unit will deal on average. Note that this takes crit chance into account, so lowering your crit chance impacts the Dmg rating because you'll crit less often, which lowers your average output.
-- **DmgS** -- DPS rating, calculated by: `Attack * Crit Chance * Crit Damage * Speed`. This measures how fast your unit can dish out damage.
-- **Mcd** -- Max Crit Damage, calculated by: `Attack * Crit Damage`. This does not take into account Crit Chance, as opposed to Dmg, and assumes your unit is at 100% Crit Chance. Useful for measuring damage of units like CDom that only need 50% Crit Chance, or PVE units that only need 85% with elemental advantage.
-- **McdS** -- Max DPS rating, calculated by `Attack * Crit Damage * Speed`. Similar to DmgS, just without Crit Chance.
-- **CP** -- This is the CP you would see on the unit's stat page ingame, but doesn't take skill enhances into account. Useful for optimizing unused characters with leftover gear for world boss.
+该页面跟主属性页面有点类似，但适用于已计算好的属性。该评分并不会在游戏里看到，但这个可以帮助你决定哪一个配装更好。
 
-In this example we're looking for Ruele builds with at least 200,000 Effective HP.
+- **HpS** -- `生命 * 速度` 评分. 对于单纯需要速度与血量而不需要其他属性的英雄来说，该评分非常有用。
+- **Ehp** -- 有效生命, 计算公式: `血量 * (防御/300 + 1)`. EHP是一个用于衡量你英雄死亡前能承受的伤害量，该评分对于需要坦度的英雄来说非常有用。
+- **EhpS** -- `有效生命 * 速度` 评分. 对于需要坦度与速度兼得的英雄来说，这个评分就很有用了。
+- **Dmg** --  平均伤害, 计算公式: `攻击 * 暴击率 * 暴击伤害`. 用于计算你英雄的平均伤害。请注意，该评分将暴击率也计算在内，所以降低你的暴击率将会影响你的伤害平分，因为你暴击越少，就会拖低你的平均输出。
+- **DmgS** -- DPS评分, 计算公式: `攻击 * 暴击率 * 暴击伤害 * 速度`. 该评分衡量了你的英雄能多快地打出伤害
+- **Mcd** -- 最大暴击伤害, 计算公式: `攻击 * 暴击伤害`. 相对于Dmg平均伤害，该评分不考虑暴击率，并且假设你的英雄是100%暴击率，该评分对于只需要50%暴击率的英雄，或是PVE中攻击克制属性只需要85%暴击率时非常有用。
+- **McdS** -- 最大DPS评分, 计算公式: `攻击 * 暴击伤害 * 速度`. 类似DmgS,只是不计入暴击率带来的影响。
+- **CP** -- 这是你在游戏内英雄属性页看到的战斗力数值，但这并不考虑技能提升带来的影响。对于你想要用吃灰装备装在板凳角色用于世界BOSS来说非常有用。
+
+在这个例子里，我们会优化寻找一个起码拥有20万的有效血量的瑞儿。
 _________________
 
-### Substat priority filter
+### 次属性优先级过滤器
 
 ![](https://i.imgur.com/i60uzCg.png)
 
-**This is probably the most useful filter but please read before using it. Using this wrong can exclude good results from the search.**
+**这个可能是最有用的过滤器，但使用前请务必先阅读好使用指南。用错了可能会将最佳配装排除在外**。
 
-Assign a priority to each substat type from -1 to 3. This will go through every gear, and calculates the # of max rolls of each stat. The # of rolls is then multiplied by the stat priority you chose. It adds up all the stat scores for a gear, and sorts your gear by their highest substat score.
+对每个次属性类型赋予优先级，从-1到3. 该优先级将会遍历每一件装备，并计算每个装备每一个次属性的属性值。属性值将会乘以你对每个次属性的优先级。然后将每一件装备的属性分加起来，并从最高的次属性分数进行排序。
 
- In this example we're mostly looking for a fast and tanky Ruele so we assign:
-- HP and Def a high rating of 3, since those are the highest priority stats
-- Speed a slightly lower rating of 2
-- And Res a rating of 1, as its a nice-to-have stat and can still be useful for her
-- We don't particularly care about Attack/Crit Chance/Crit Damage/Effectiveness, so we leave those at 0
+ 在这个例子中，我们主要是寻找一个又快又肉的瑞儿，所以我们指定如下的属性优先级:
+- 血量与防御，高评分3，因为他们是最高优先级的属性
+- 速度评分就低一点点，2
+- 并且抵抗评分为1，该属性其实是一个对于瑞儿有用的属性
+- 我们并不关心攻击/暴击率/爆伤/命中，所以这些属性的权重是0
 
-Then, we set the Top % slider to 30%. This will take all your weapons, score them based on the priority defined above, then only considers the Top 30% of the scores for optimization. Then it does the same for helmets, armors, etc, and then the optimizer generates permutations based on those Top 30% gears.
+然后，我们将最高百分比的滑块调整到30%。这将计算你所有的武器，并将根据你之前所制定的优先级来计算分数，然后只考虑前30%分数的装备以进行优化配装。然后对头盔、护甲等进行相同的操作。最后优化配装器会根据前30%的装备进行排列组合。
 
-**The Top % slider must be set to something other than 100% for this filter to work**, otherwise you're just using the Top 100% of your gears and nothing is being filtered. Worth noting that this rating is a heuristic so it doesn't always produce optimal results if your percent is set too low. I find that 30-50% is a good range to work with, because 50% filters out most of the irrelevant gears (like dps stats on a tank build, or vice versa). Below 30%, the filter gets very sensitive and you might not have enough gears to produce optimal results, so the results can be missing some permutations when some useful gears get filtered out. Try playing around with different Top % values.
+**要让该过滤器正常使用，必须将“最高百分比”滑块设置为100%以外的值**, 否则你将只会使用前100%的装备，没有任何装备会被过滤。值得一提的是，这种评分是一种启发式的方式，如果你设置最高百分比太低，那它并不总是产生最优结果。我发现30~50%区间是比较好的选择，因为50%会过滤大部分不相关的装备（比如你需求坦装，就会过滤掉DPS装，反之亦然）。低于30%的话，该过滤器就会变得过于敏感，那你可能就不会获得充足的装备来产生最佳配装结果，所以可能会错过最佳的配装结果，因为一下好装备已经被过滤掉了。多尝试一下不同的最高百分比值吧！
 
-An example priority filter for a DPS unit like Arby could be something like this, where you only want damage stats:
+举个例子，像暗二五这样的纯DPS角色，优先级过滤器可能就会像下面这样，因为你只需要输出属性:
 
 ![](https://i.imgur.com/sdIG6xQ.png)
 
-Or for a tanky Champion Zerato, where you want a mix of tankiness, damage, and effectiveness, but NOT resistance, you can set resistance to -1 to decrease the gear rating if it has resist substats:
+或者像肉逼泥巴哥一样，当你想要混合坦度，输出，命中，但不需要抵抗时。你可以把抵抗设置为-1来降低拥有抵抗属性的装备的评分。
 
 ![](https://i.imgur.com/CF3KmxT.png)
 
-Choosing a good priority filter makes the optimization a lot easier since you won't have to consider irrelevant or low-rolled gears.
-
+选择一个好的优先级过滤器，可以让你的优化配装容易很多，因为你不用去考虑不相关或者没什么卵用的装备搭配。
 _________________
 
-### Main stat and set filters
+### 主属性及套装过滤器
 
 ![](https://i.imgur.com/fYOaDPB.png)
 
-This one's fairly straightforward, we're looking for:
-- Necklaces with Health % OR Defense %
-- Rings with Health % OR Defense %
-- Boots with Speed
-- Speed set
-- Resist set OR immunity set
+这个非常简单，我们正在寻找一套:
+- 有生命%或者防御%的项链
+- 有生命%或防御%的戒指
+- 有速度的鞋子
+- 速度套
+- 抵抗或者免疫套
 
-If we don't care about sets as much for a tanky/damage ML Ken or something, this allows for broken sets as well. Here we only care that he has an immunity set, and no preference for any other sets, so they're left blank.
+如果我们想要配装的角色不是很关心套装（比如暗拳或者其他类似的角色），这里就可以让我们用散件搭配。在这里需要注意的是暗拳需要免疫套，除此以外如果不需要其他的套装，留白就可以了。
 
 ![](https://i.imgur.com/8HEsbvY.png)
 
 _________________
 
-### Substat force filter
+### 次属性强制过滤器
 
 ![](https://i.imgur.com/R8XjYhk.png)
 
-Note that in the settings panel previously we set Force mode to "At least 2 stats". Here we have 3 substats we want to force, and with the force mode, we're only optimizing with gear that match at least 2 of these substats:
-- At least 3 Speed
-- At least 1 Hp %
-- At least 1 Def %
+请注意在设定页面中，我们之前设置强制模式为“最起码2个属性”。这里我们有3个次属性想要强制设定，所以用强制模式，我们就可以优化那些起码含有如下2个次属性的装备:
+- 最起码3速度
+- 最起码1 HP %
+- 最起码1 防御 %
 
-For example:
-- A gear with substats: 4 Speed / 8% Atk / 16% Hp / 8% Res would pass this filter because it matches at least 2 stats: Hp% and Speed.
-- A gear with substats: 2 Speed / 8% Atk / 16% HP / 8% Res would fail this filter, because only 1 substat matches the filter: Hp% . This gear will not be used in the optimizations.
+举个例子:
+- 一件装备有如下次属性: 4 速/ 8% 攻击/ 16% 生命/ 8% 抵抗 就会通过这个过滤器，因为他符合起码2个属性:生命百分比和速度
+- 一件装备有如下次属性: 2 速 / 8% 攻击 / 16% 生命 / 8% 抵抗 就会被这个过滤器过滤掉，因为只有一个次属性符合这个过滤器的要求: 生命百分比。 那这件装备在自动配装时就不会被计算在内。
 
-Setting the substat force filter is useful for narrowing down the search space for the optimizer, and reducing the number of permutations it needs to go calculate will make it go faster. Do be careful about filters you set, because an overly aggressive filter could exclude good gears that are useable for this unit. You could have a gear with 2 Speed/ 40% Hp / 100 flat Def / 200 flat HP, and it would fail this filter because only Hp% matches, even though the gear would still be useful.
-
+设置次属性强制优化器对于缩小自动配装搜索时的范围是非常有用的，而且可以减少排列组合所以可以计算得更快。请注意你设定的过滤器，因为过于激进的过滤器可能会将你包里的好装备排除在外。因为你可能有一件 2 速度 / 40% 血量 / 100 防御数值 / 200 生命数值 的装备，但这件装备仍然会被过滤器排除掉，因为只有生命百分比符合要求，即使这件装备是有用的。
 _________________
 
-### Optimization Results
+### 自动配装结果
 
 ![](https://i.imgur.com/zF1xKlE.png)
 
-Here you can see all the results from the optimization, sort by stat, and equip/lock the results.
-- The top row shows your currently equipped gear stats
-- Each column is color coded based on the min/max ranges of the stat on each page
-- You can use the arrows at the bottom to navigate between multiple pages of results
-- Select All/Deselect All modifies the little checkbox on each gear, or alternatively you can click individual boxes
-- Equip Selected will equip those checked gears onto the hero (while unequipping anything they were holding before)
-- Lock Selected will mark those checked gears as locked, which affects later optimizations that have "Locked Items" unchecked in settings.
-- Clicking on the pencil/hammer icons will allow you to edit/reforge item stats.
+在这里你可以看到所有自动配装的结果，根据属性排序，也可以装备/锁定结果。
+- 最顶那一行是你现在装备的装备属性
+- 每一行都会被颜色标记，基于你设定的每个属性最小/最大范围
+- 你可以用底部的箭头来在不同页之间进行翻页
+- 全选/取消全选 会更改每件装备上的小复选框，或者你可以单独点击每一个复选框
+- 装备按钮选中的话就会将该装备装备到英雄身上（同时顶掉他身上已装备的装备）
+- 锁定按钮选中就会将选中的装备标记为锁定，这就会影响后续拥有“锁定”标记的装备的优化配装。
+- 点击铅笔/锤子图标就会允许你编辑/重铸装备属性
 
-## Gear Tab
+## 装备页
 
 ![](https://i.imgur.com/W6bHn4Y.png)
 
-Here you can find a table of all your gears, and sort/filter them. The icons at the bottom enable filters for set and gear slot, and the X clears the filters.
-The **Score** column is a stat I made up which is similar to WSS, with the difference that it takes flat stats into consideration while WSS ignores them. The calculation is:
+在这里你可以找到一个包含你所有装备的表格，也可以对他们进行排序/过滤。底部的图标可以根据装备栏位和套装进行过滤，X 可以清除所有的过滤器。
+**分数** 列是一个类似WSS的评分（我创建的），区别在于我将数值属性页计算在内，而WSS评分就忽略他们。评分计算依据是:
+    分数 = 攻击百分比
+    + 防御百分比
+    + 生命百分比
+    + 效果命中
+    + 效果抵抗
+    + 速度 * (8/4)
+    + 暴击伤害 * (8/7)
+    + 暴击率 * (8/5)
+    + 攻击数值 / 39 * 0.5
+    + 防御数值 /31 * 0.5
+    + 生命数值 / 174 * 0.5
 
-    Score = Attack %
-    + Defense %
-    + Hp %
-    + Effectiveness
-    + Effect Resistance
-    + Speed * (8/4)
-    + Crit Damage * (8/7)
-    + Crit Chance * (8/5)
-    + Flat Attack / 39 * 0.5
-    + Flat Defense / 31 * 0.5
-    + Flat Hp / 174 * 0.5
-
-Its used as a measure of how well your gear rolled, scaled by the max roll for 85 gear (using max of 4, not 5 for speed). I found the average rolls for flat stats and used that as a measure of how well the flat stats rolled. The 0.5 multiplier is completely arbitrary, but represents that flat stats are generally less desirable than percent stats.
+这用来评估你这件装备有多好，由85装备的最大属性值来进行缩放（速度最高为4，而不是5）。我发现数值属性的平均属性并用来评估数值属性的评分，0.5的倍数乘是随意设置的，但他的平均数值一般不如百分比数值。
 
 ![](https://i.imgur.com/fwqjtkF.png)
 
-You can edit existing gears or add new gears with this page, and filling in the relevant fields.
+在这个页面里，你可以编辑现有的装备，或者添加新的装备，并填写相关字段。
 
-## Heroes Tab
+## 英雄页
+
 
 ![](https://i.imgur.com/FnMbGWO.png)
 
-Here you can add new heroes and manage existing ones. I think most of the buttons are fairly self explanatory, the one thing worth noting is the **Add Bonus Stats** page, which lets you add artifact/imprint stats to the hero for optimization.
+
+在这里你可以添加新的英雄或者管理现有的。我认为绝大多数按钮都挺容易自己搞明白的，就其中一点需要注意的是 **添加额外属性** 页，这里可以让你为英雄添加神器/阵型属性，以便进行优化配装。
+
 
 ![](https://i.imgur.com/tAytvsb.png)
 
-SSS Krau with +30 Aurius will have 91 Atk / 819 Hp / and 18% imprint Hp.
 
-## Importer tab
+SSS 克劳乌（宝马）用+30的亚乌利斯分摊神器，将会有 91 攻击 / 819 生命 / 以及 18% 的自阵生命。
+
+## 导入页
 
 ![](https://i.imgur.com/LyJq3Lr.png)
 
-This tab lets you do various things with importing/exporting files.
+该页面让你可以导入/导出不同的东西
 _________________
 
-### Creating gear data from screenshots
+### 从截图创建装备
 
-Select the folder you have your screenshots in and the app will start reading your screenshots. Make sure the folder only contains your screenshots and nothing else. This will then output your gear.txt file, and you can export it somewhere for the next step. If there are any errors reading the screenshots, the list of failed files will be shown.
+选择你截图所在的文件夹，本应用将开始读取你的截图。 确保该文件夹仅包含E7的截图，而没有其他内容。 然后将输出一个gear.txt文件，你可以将其导出到下一步。 如果读取截图有任何错误，将显示失败文件列表。 
 
-### Importing gear data
+### 从文件导入装备
 
-Once you have the gear.txt file from the OCR step, choose the file and it will import the gear into the optimizer.
+当你在OCR步骤中获得了gear.txt文件后，选择文件，它将把装备导入到优化配装器中。 
 
-* *Append data* will add the new gears to your existing gears.
-* *Overwrite data* will load in the new data, removing all previous items and heroes
-* *Merge data* will combine your new gear screenshots with your currently loaded gear while keeping your heroes' equipped gear and builds intact.
+* *新添数据* 会将新装备添加到你现有的装备列表中
+* *覆写数据* 会载入新的装备数据，并删除旧的英雄和装备
+* *合并数据* 会将你新装备与当前加载的装备合并在一起，同时保持英雄已装备的装备 
 
-If you want to wipe all your data and start clean with gear screenshots, use Overwrite.
+如果你想清除你所有的旧有数据并重新用新的截图开始，使用覆盖。
 
-If you have new screenshot files to add to a save, use the Append option.
+如果你有新的截图文件要添加到装备列表中，请使用“附加”选项。 
 
-If you already have a save, and you've screenshotted all your gear again, use Merge to replace old items with new items.
-
-
-### Save/Load all optimizer data
-
-Once you make changes to your items/heroes, the changes should be saved before you close the app. You can choose a file to save it to, and then later on load that file to import the data back in.
-
-The app also does autosave to an 'autosave.json' upon changes being made, and will autoload whatever was saved to the autosave file the next time the app opens.
+如果您已有存档，并且再次截图了所有装备，请使用“合并”将旧装备替换为新装备。 
 
 
-### Import gear from Zarroc optimizer
+### 保存/载入装备及英雄
 
-If were a user of Zarroc's gear optimizer, this lets you import your data directly from your existing Zarroc save file. All gear, heroes, and artifacts will be imported.
+对装备/英雄进行更改后，应先保存更改，然后再关闭应用程序。 您可以选择一个文件保存到该文件，然后在重新打开应用时加载该文件后并导入数据。 
+
+进行更改后，该应用程序还会自动保存到“ autosave.json”，并在下次打开该应用程序时自动将保存的内容自动加载到自动保存文件中。 
 
 
-## Getting Started
+### 从Zarroc自动配装器导入装备
 
-Please read these instructions carefully!
+如果你是Zarroc装备优化器的用户，这使您可以直接从现有Zarroc保存文件中导入数据。 所有装备，英雄和神器都会被导入。 
 
-**Installation:**
+
+## 快速入门
+
+请务必仔细阅读这些说明！ 
+
+**安装:**
 
 #### Windows
 
-1. On the [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) page, choose the latest release, and download the file that looks like ``FribbelsE7Optimizer-x.x.x-windows.zip``
-    * Do not download the Source Code options, those won't work
-2. Install **Java 8 - 64 bit** https://java.com/en/download/manual.jsp - Get the offline installer
-    * After installing, restart your computer (required!)
-3. Install an emulator to run Epic 7 on
-    * I used LDPlayer, but others have worked as well: MeMu, Nox, etc. Bluestacks has issues with screen resolution, would recommend an alternative. See a solution for getting Bluestacks working [here](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/commit/94b8730e94e6323b278265ab46f6602ed7822c22#r45552268)
-4. Set the emulator's screen resolution to **1600 x 900**. [Example](https://i.imgur.com/kyUQ86a.png)
-5. Set Epic 7 to **English** and enable **High Quality Support** in settings. [Example](https://i.imgur.com/iEbfVN3.png)
-6. Unzip the downloaded file, and run FribbelsE7Optimizer.exe (or FribbelsE7Optimizer.dmg/app on Mac) [Example](https://i.imgur.com/jltdg0U.png)
+1. 在 [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) 页面, 选择最新的发布版本, 然后下载一个类似 ``FribbelsE7Optimizer-x.x.x-windows.zip`` 名字的文件
+    * 别下载源文件文件，那用不了的
+2. 安装 **Java 8 - 64 位** https://java.com/en/download/manual.jsp - 下载离线安装包
+    * 安装完后重启一下电脑 (必须!)
+3. 安装一个安卓模拟器去运行E7
+    * 我用雷电模拟器,但其他的模拟器应该也能用，比如Mumu，夜神等等。蓝叠因为在屏幕分辨率那里有问题，所以建议使用别的。如果你硬要使用蓝叠，那看看下面这个链接应该可以搞定 [蓝叠的解决方法](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/commit/94b8730e94e6323b278265ab46f6602ed7822c22#r45552268)
+4. 将模拟器的分辨率设置为 **1600 x 900**. [Example](https://i.imgur.com/kyUQ86a.png)
+5. 将E7设置为 **英语** 并在设置中开启 **高质量模式** . [Example](https://i.imgur.com/iEbfVN3.png)
+6. 解压下载的文件，并运行FribbelsE7Optimizer.exe (或者在Mac上运行 FribbelsE7Optimizer.dmg/app ) [例子](https://i.imgur.com/jltdg0U.png)
 
-#### Mac OS/Bluestacks
+#### Mac OS/蓝叠
 
-1. On the [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) page, choose the latest release, and download the file that looks like ``FribbelsE7Optimizer-x.x.x-mac.dmg``
-    * There is a dmg file and a zip file. Try the dmg first and if it doesn't work, try the zip. Mac version is still experimental.
-    * Do not download the Source Code options, those won't work
-2. Install **Java 8 - 64 bit**
-    * Mac needs both JRE and JDK:
-    * JRE: https://java.com/en/download/manual.jsp - Get the offline installer
+1. 在 [Releases](https://github.com/fribbels/Fribbels-Epic-7-Optimizer/releases) 页面, 选择最新的发布版本, 然后下载一个类似 ``FribbelsE7Optimizer-x.x.x-mac.dmg`` 名字的文件
+    * 在那有个dmg文件和zip文件，先尝试下载dmg文件，如果dmg文件用不了再尝试zip格式，Mac版本还在测试阶段
+    * 别下载源文件文件，那用不了的
+2. 安装 **Java 8 - 64 位**
+    * Mac需要同时安装JRE和JDK:
+    * JRE: https://java.com/en/download/manual.jsp - 下载离线安装包
     * JDK: https://www.oracle.com/java/technologies/javase-downloads.html
-    * After installing, restart your computer (required!)
-3. Install [Bluestacks](https://www.bluestacks.com/download.html)
-    * Set the emulator's screen resolution to **1600x900** in the Preference menu
-4. Configure keyboard shortcut for Screenshot
-    * On your Mac: System Preference > Keyboard > Shortcuts Tab
-      * Left Sidebar: Select App Shortcuts
-      * Click the [+] button to add a shortcut
-      * Application: Bluestacks
-      * Menu Title: `Take screenshot` (any typo here will make it not work)
-      * Keyboard Shortcut: Anything you want it to be
-5. Back to Bluestacks: Install E7 from the Play Store and launch the game
-   * Set Epic 7 to **English** and enable **High Quality Support** in settings. [Example](https://i.imgur.com/iEbfVN3.png)
-6. Make sure to enter Full Screen Mode (Cmd+Shift+F) before starting your gear capture
+    * 安装完后重启一下电脑 (必须!)
+3. 安装 [蓝叠](https://www.bluestacks.com/download.html)
+    * 在设置菜单里将模拟器的分辨率设置为 **1600 x 900**
+4. 设置键盘截图快捷键
+    * 在你的Mac的: 系统设置 > 键盘 > 快捷方式
+      * 左侧边栏: 选择应用快捷方式
+      * 点击[+]按钮去新增一个快捷方式
+      * 应用:蓝叠
+      * 标题: `Take screenshot`(必须英文)(这里打错了的话就用不了了)
+      * 键盘快捷键: 这里你喜欢哪个就设哪个快捷键
+5. 返回蓝叠:安装E7并打开游戏
+   * 将E7设置为 **英语** 并在设置中开启 **高质量模式** . [Example](https://i.imgur.com/iEbfVN3.png)
+6. 确保开始装备截图前，进入全屏模式 (Cmd+Shift+F)
 
-**Importing gear screenshots:**
+**导入装备截图:**
 
-1. Open the Gear Management screen in Epic 7 and sort by Max Enhance<br><br>
-2. Click each of the gears that you want to import, and screenshot it with your emulator's hotkey. Every screenshot should be **1600x900** and look **EXACTLY** like this: https://i.imgur.com/68A8Uf0.jpg
+1. 在E7里打开装备管理界面并选择按照'最大强化'排列<br><br>
+2. 一一点击你想要导入的装备，并用你模拟器的快捷键进行截图，所有截图的分辨率必须为 **1600x900** 并且截图格式跟下图**完全一致**才能被正确识别: https://i.imgur.com/68A8Uf0.jpg
 
 ![https://i.imgur.com/ny7uaa8.jpg](https://i.imgur.com/ny7uaa8.jpg)
 
-* Most emulators have a screenshot hotkey to make this easier: Ctrl + 0 for LDPlayer
-* I would recommend screenshotting 10-20 gears to start with, then testing the rest of the steps to make sure the screenshots work before doing them all. I usually only screenshot the +9 to +15 gears for the optimizer.
-3. Create an empty folder and collect all your screenshots into that folder.<br><br>
-4. Go to the Importer tab, click on "Choose folder" under *Creating gear data from screenshots*, find your screenshots folder, and click Open Folder.<br><br>
-5. The app will start reading the screenshots and your progress will be displayed. Once it is done, click Export, and save the *gear.txt* file.<br><br>
-6. Under the *Importing gear data* section, click on Append data, and select your *gear.txt* file.<br><br>
-7. Now you should see your imported gears under the Gears tab.
+* 大部分模拟器都有截图快捷键的，比如雷电就是Ctrl+0
+* 我建议先导入10~20件装备，测试一下余下的步骤确保这些截图正常导入。一般来说我只会截+9以上的装备导入到优化器里面。
+3. 创建一个空的文件夹，并将你所有的截图保存在里面.<br><br>
+4. 点击App里的导入页，然后在*从截图创建装备数据* 下面点击"选择文件夹"，选中你的截图文件夹并点击"打开文件夹".<br><br>
+5. 然后App就会开始自动读取你的截图，并且会显示进度。当搞定以后就点击Export去将装备列表保存到*gear.txt*文件里.<br><br>
+6. 在*导入装备数据*下面点击添加数据，并选中你上一步生成的*gear.txt*文件.<br><br>
+7. 现在你应该就能在装备页里面看见你导入的装备了.
 
-**Optimizing a unit:**
+**为一个英雄优化配装:**
 
-1. Add a unit on the Heroes tab, by selecting their name and clicking Add New Hero.
-2. Select the new hero and click Add Bonus Stats. Here add any stats from your artifact, imprint, or EE. [Example](https://i.imgur.com/2aC22mN.png)
-3. Go to the Optimizer tab, then select the hero. Fill in the main stats and set that you want into the right panel. [Example](https://i.imgur.com/3yfbkrE.png)
-4. Fill in any filters you would like to apply. Each filter is described in detail in this section: https://github.com/fribbels/Fribbels-Epic-7-Optimizer#optimizer-tab
-5. Hit Submit, and after processing a bit you should see a table of results.
-6. Navigate the results with your arrow keys or mouse, select the result you want, and click Equip Selected.
-7. You should now see your hero using those gears.
-8. If you want to manually equip a certain item on a unit, go to the Gear tab -> Edit Selected Item -> Equipped. [Example](https://i.imgur.com/Bqs3ETL.png)
+1. 在英雄页里面新增一个英雄，选好他们的名字然后点添加新英雄就可以了
+2. 选择这个新英雄，并且给他们添加额外的属性。比如在这里你可以加点你这个英雄的自阵/神器属性/或者专属装备的属性. [Example](https://i.imgur.com/2aC22mN.png)
+3. 进入优化配装页，然后选中你刚刚那个英雄，在右边面板填写你想要的主属性和其他选项（比如套装） [Example](https://i.imgur.com/3yfbkrE.png)
+4. 填写那些你想要用上的过滤器，每个过滤器都已经在下面这个章节详细介绍过了: https://github.com/Miztan/Fribbels-Epic-7-Optimizer#自动配装页
+5. 然后点击Submit按钮进行提交，过一阵子你应该就能看到结果列表
+6. 选好你想要的装备组合，然后点击"Equip"按钮来装备上这套装备
+7. 这你应该能看到你那个英雄穿上了这套装备了
+8. 如果你想要手动一件件地装装备，去装备页->编辑选中装备->已装备. [Example](https://i.imgur.com/Bqs3ETL.png)
 
-Here's a video that covers most of the importing process: https://www.youtube.com/watch?v=i_QW4INcZIE
+下面这有个视频涵盖了大部分的操作部分，可以看看学习下: https://www.youtube.com/watch?v=i_QW4INcZIE
 
 
-**Updating the optimizer with new gear:**
+**用新装备去更新优化配装器:**
 
-* It helps to update the optimizer as you enhance/reforge gear. Add new pieces manually on the Gear screen or click the reforge icon to update 85 -> 90 gear.
-* To import a bunch of new gear at once, screenshot only the new gear, then use the screenshot tool to generate another gear.txt file. Then use the *Append* option to add the gear.txt to your existing save file.
-* If you want to re-screenshot all your gear, you can use the screenshot tool to generate the gear.txt again, and then either *Overwrite* your data to erase previous gear + heroes, or *Merge* the new gear.txt to replace old items and keep heroes/builds.
+* 当你强化/重铸装备时，它有助于更新配装优化器。 在装备页上手动添加新零件，或单击重铸图标以更新85-> 90装备。 
+* 要一次导入一堆新装备，请仅对新装备进行截图，然后使用截图导入工具生成另一个gear.txt文件。 然后使用* Append * 选项将gear.txt添加到您现有的保存文件中。 
+* 如果您想重新截图所有装备，则可以使用截图导入工具再次生成gear.txt，然后*覆盖*您的数据以清除以前的装备+英雄，或者*合并*新的gear.txt 替换旧装备并保留英雄/配装。 
 
-**Tips to get good optimization results:**
+**如何获得好的配装优化结果:**
 
-Here's some quick tips on getting the best results. This is assuming you've read the [Optimization panel](https://github.com/fribbels/Fribbels-Epic-7-Optimizer#optimizer-tab) descriptions.
+以下是获得最佳优化结果的一些小Tips。 假设您已阅读[自动配装页]（https://github.com/Miztan/Fribbels-Epic-7-Optimizer#自动配装页）的说明。 
 
-* **Input the sets and main stats whenever possible.** This is the easiest way to narrow down results.
-* **Use the substat priority filter and make sure to set your stat priority correctly!**
-  * DPS units should have high priority on Atk / Cr / Cd / Speed for example.
-  * Tank units should have high priority on Hp / Def / Speed for example.
-  * Bad priorities will lead to bad results because good options get filtered out.
-* **Lower the Top % to make the search faster, or increase Top % to search more results.** Most of the time I use 25-40%, sometimes lower if I want only my best gear on the unit.
-* If you want a certain piece of gear to stay on a hero, go to the Gear tab -> Edit Selected Item -> Equipped and equip it on them first. [Example](https://i.imgur.com/oNO9ivL.png) Then you can use the optimizer with "Keep current" checked to keep that piece on them.
+* **尽可能选择套装和主属性.** 这是最容易缩小配装范围的方法.
+* **使用次属性优先级过滤器，并且确保你正确设定好这个属性优先级!**
+  * 比如输出英雄应该对攻击/暴击/爆伤/速度有很高的优先级.
+  * 比如肉逼单位应该对血量/防御/速度有很高的优先级.
+  * 错误的优先级会导致很差的结果，因为好的选项都被你的过滤器过滤掉了.
+* **降低最高百分比%来加快搜索速度，或者提高最高百分比%来搜索更多的结果组合.** 大部分时间我都用25~40%之间，有些时候会低一点，因为我只想我最好的装备装在这个角色身上
+* 如果你想让某个装备留在英雄身上，请转至装备页->编辑装备->并先将装备在指定英雄身上。 [示例]（https://i.imgur.com/oNO9ivL.png） 然后，您可以使用已选中“Keep Current”状态的优化器，将其保留在该英雄身上。 
 
 ## TODO List
 
@@ -391,7 +394,7 @@ Hopefully this is useful for anyone looking for an easier way to gear their unit
  - Verify all imported screenshots are image files
  - Investigate decrypting network traffic for gear data
 
-## Troubleshooting
+## 疑难解答
 
 - If the optimizer doesn't work or doesn't load correctly:
   - Try restarting your computer, and reopen the app (there might be a child process still kicking around)
