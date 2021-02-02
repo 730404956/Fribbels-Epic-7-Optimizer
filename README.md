@@ -289,7 +289,7 @@ _________________
     * 在设置菜单里将模拟器的分辨率设置为 **1600 x 900**
 4. 设置键盘截图快捷键
     * 在你的Mac的: 系统设置 > 键盘 > 快捷方式
-      * 左侧边栏Left Sidebar: 选择应用快捷方式
+      * 左侧边栏: 选择应用快捷方式
       * 点击[+]按钮去新增一个快捷方式
       * 应用:蓝叠
       * 标题: `Take screenshot`(必须英文)(这里打错了的话就用不了了)
@@ -301,12 +301,12 @@ _________________
 **导入装备截图:**
 
 1. 在E7里打开装备管理界面并选择按照'最大强化'排列<br><br>
-2. 一一点击你想要导入的装备，并用你模拟器的快捷键进行截图，所有截图的分辨率必须为 **1600x900** 并且 **完完全全** 跟下图一样的模式: https://i.imgur.com/68A8Uf0.jpg
+2. 一一点击你想要导入的装备，并用你模拟器的快捷键进行截图，所有截图的分辨率必须为 **1600x900** 并且截图格式跟下图**完全一致**才能被正确识别: https://i.imgur.com/68A8Uf0.jpg
 
 ![https://i.imgur.com/ny7uaa8.jpg](https://i.imgur.com/ny7uaa8.jpg)
 
 * 大部分模拟器都有截图快捷键的，比如雷电就是Ctrl+0
-* 我建议先导入10~20件装备，任何测试一下余下的步骤确保这些截图正常导入。一般来说我只会截+9以上的装备导入到优化器里面。
+* 我建议先导入10~20件装备，测试一下余下的步骤确保这些截图正常导入。一般来说我只会截+9以上的装备导入到优化器里面。
 3. 创建一个空的文件夹，并将你所有的截图保存在里面.<br><br>
 4. 点击App里的导入页，然后在*从截图创建装备数据* 下面点击"选择文件夹"，选中你的截图文件夹并点击"打开文件夹".<br><br>
 5. 然后App就会开始自动读取你的截图，并且会显示进度。当搞定以后就点击Export去将装备列表保存到*gear.txt*文件里.<br><br>
@@ -315,35 +315,37 @@ _________________
 
 **为一个英雄优化配装:**
 
-1. Add a unit on the Heroes tab, by selecting their name and clicking Add New Hero.
-2. Select the new hero and click Add Bonus Stats. Here add any stats from your artifact, imprint, or EE. [Example](https://i.imgur.com/2aC22mN.png)
-3. Go to the Optimizer tab, then select the hero. Fill in the main stats and set that you want into the right panel. [Example](https://i.imgur.com/3yfbkrE.png)
-4. Fill in any filters you would like to apply. Each filter is described in detail in this section: https://github.com/fribbels/Fribbels-Epic-7-Optimizer#optimizer-tab
-5. Hit Submit, and after processing a bit you should see a table of results.
-6. Navigate the results with your arrow keys or mouse, select the result you want, and click Equip Selected.
-7. You should now see your hero using those gears.
-8. If you want to manually equip a certain item on a unit, go to the Gear tab -> Edit Selected Item -> Equipped. [Example](https://i.imgur.com/Bqs3ETL.png)
+1. 在英雄页里面新增一个英雄，选好他们的名字然后点添加新英雄就可以了
+2. 选择这个新英雄，并且给他们添加额外的属性。比如在这里你可以加点你这个英雄的自阵/神器属性/或者专属装备的属性. [Example](https://i.imgur.com/2aC22mN.png)
+3. 进入优化配装页，然后选中你刚刚那个英雄，在右边面板填写你想要的主属性和其他选项（比如套装） [Example](https://i.imgur.com/3yfbkrE.png)
+4. 填写那些你想要用上的过滤器，每个过滤器都已经在下面这个章节详细介绍过了: https://github.com/Miztan/Fribbels-Epic-7-Optimizer#自动配装页
+5. 然后点击Submit按钮进行提交，过一阵子你应该就能看到结果列表
+6. 选好你想要的装备组合，然后点击"Equip"按钮来装备上这套装备
+7. 这你应该能看到你那个英雄穿上了这套装备了
+8. 如果你想要手动一件件地装装备，去装备页->编辑选中装备->已装备. [Example](https://i.imgur.com/Bqs3ETL.png)
 
-Here's a video that covers most of the importing process: https://www.youtube.com/watch?v=i_QW4INcZIE
+下面这有个视频涵盖了大部分的操作部分，可以看看学习下: https://www.youtube.com/watch?v=i_QW4INcZIE
 
 
 **Updating the optimizer with new gear:**
+**用新装备去更新优化配装器:**
 
-* It helps to update the optimizer as you enhance/reforge gear. Add new pieces manually on the Gear screen or click the reforge icon to update 85 -> 90 gear.
-* To import a bunch of new gear at once, screenshot only the new gear, then use the screenshot tool to generate another gear.txt file. Then use the *Append* option to add the gear.txt to your existing save file.
-* If you want to re-screenshot all your gear, you can use the screenshot tool to generate the gear.txt again, and then either *Overwrite* your data to erase previous gear + heroes, or *Merge* the new gear.txt to replace old items and keep heroes/builds.
+* 当你强化/重铸装备时，它有助于更新配装优化器。 在装备页上手动添加新零件，或单击重铸图标以更新85-> 90装备。 
+* 要一次导入一堆新装备，请仅对新装备进行截图，然后使用截图导入工具生成另一个gear.txt文件。 然后使用* Append * 选项将gear.txt添加到您现有的保存文件中。 
+* 如果您想重新截图所有装备，则可以使用截图导入工具再次生成gear.txt，然后*覆盖*您的数据以清除以前的装备+英雄，或者*合并*新的gear.txt 替换旧装备并保留英雄/配装。 
 
-**Tips to get good optimization results:**
+**如何获得好的配装优化结果:**
 
 Here's some quick tips on getting the best results. This is assuming you've read the [Optimization panel](https://github.com/fribbels/Fribbels-Epic-7-Optimizer#optimizer-tab) descriptions.
+以下是获得最佳优化结果的一些小Tips。 假设您已阅读[自动配装页]（https://github.com/Miztan/Fribbels-Epic-7-Optimizer#自动配装页）的说明。 
 
-* **Input the sets and main stats whenever possible.** This is the easiest way to narrow down results.
-* **Use the substat priority filter and make sure to set your stat priority correctly!**
-  * DPS units should have high priority on Atk / Cr / Cd / Speed for example.
-  * Tank units should have high priority on Hp / Def / Speed for example.
-  * Bad priorities will lead to bad results because good options get filtered out.
-* **Lower the Top % to make the search faster, or increase Top % to search more results.** Most of the time I use 25-40%, sometimes lower if I want only my best gear on the unit.
-* If you want a certain piece of gear to stay on a hero, go to the Gear tab -> Edit Selected Item -> Equipped and equip it on them first. [Example](https://i.imgur.com/oNO9ivL.png) Then you can use the optimizer with "Keep current" checked to keep that piece on them.
+* **尽可能选择套装和主属性.** 这是最容易缩小配装范围的方法.
+* **使用次属性优先级过滤器，并且确保你正确设定好这个属性优先级!**
+  * 比如输出英雄应该对攻击/暴击/爆伤/速度有很高的优先级.
+  * 比如肉逼单位应该对血量/防御/速度有很高的优先级.
+  * 错误的优先级会导致很差的结果，因为好的选项都被你的过滤器过滤掉了.
+* **降低最高百分比%来加快搜索速度，或者提高最高百分比%来搜索更多的结果组合.** 大部分时间我都用25~40%之间，有些时候会低一点，因为我只想我最好的装备装在这个角色身上
+* 如果你想让某个装备留在英雄身上，请转至装备页->编辑装备->并先将装备在指定英雄身上。 [示例]（https://i.imgur.com/oNO9ivL.png） 然后，您可以使用已选中“Keep Current”状态的优化器，将其保留在该英雄身上。 
 
 ## TODO List
 
@@ -394,7 +396,7 @@ Hopefully this is useful for anyone looking for an easier way to gear their unit
  - Verify all imported screenshots are image files
  - Investigate decrypting network traffic for gear data
 
-## Troubleshooting
+## 疑难解答
 
 - If the optimizer doesn't work or doesn't load correctly:
   - Try restarting your computer, and reopen the app (there might be a child process still kicking around)
